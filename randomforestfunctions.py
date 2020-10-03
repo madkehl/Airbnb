@@ -13,8 +13,7 @@ def prep_for_rf(colname, df, colsub = 5):
     if isinstance(colsub, str):
         X = df2[df2.columns.drop(list(df2.filter(regex=colsub)))]
         X = X.reset_index(drop = True)
-        
-    X = X.drop(['index'], axis = 1)
+      
     X = X.apply(fillmean)
     y = df2[colname]
     return(X, y)
