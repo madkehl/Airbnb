@@ -1,3 +1,12 @@
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk import pos_tag
+
+
+import spacy
+nlp = spacy.load("en_core_web_md")
+
 def prettify (pos_tagged):    
     p_2 = ""
     for z in pos_tagged:
