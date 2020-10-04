@@ -6,15 +6,19 @@ from sklearn.model_selection import KFold
 from sklearn.inspection import permutation_importance
 
 
-def prep_for_rf(colname, df, colsub = 5):
+def prep_for_rf(colname, df, colsub = 5, nested = 5):
     fillmean = lambda col: col.fillna(col.mean())
     df2 = df.copy()
     df2 = df2.dropna(subset = [colname], axis = 0).reset_index(drop = True)
     if isinstance(colsub, str):
         X = df2[df2.columns.drop(list(df2.filter(regex=colsub)))]
         X = X.reset_index(drop = True)
-      
-    X = X.apply(fillmean)
+    if isinstance(nested, str):
+        X = X.groupby([nested]).transform(lambda x: x.fillna(x.mean()))
+        X[nested] = df2[nested]
+        X = X.apply(fillmean)
+    else:
+        X = X.apply(fillmean)
     y = df2[colname]
     return(X, y)
 
