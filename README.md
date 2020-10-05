@@ -20,9 +20,8 @@ If the repo is cloned, the Jupyter notebook should run smoothly from start to fi
 # Files included:
 
 * **listings.csv and reviews.csv**:  These are taken directly from the above link
-* **Udacity-1.ipynb**  This notebook standalone contains all the code necessary to run the project.  
+* **TopScoringAirbnbs.ipynb**  This notebook standalone contains all the code necessary to run the project.  
 * **txt_df**: is a file that contains adjective/adverb count and word count for the text columns specified in Udacity-1.  It is contained as a separate file because the code takes a long time to run, however the syntax exists in Udacity-1 to recreate it (cell 12).
-* **Airbnb_xxx_features.png**: These are just pngs of the graphs contained in Udacity-1
 
 # Current Requirements:
 pandas, numpy, seaborn, re, statistics, sklearn, nltk, plotly, statsmodels
