@@ -1,6 +1,6 @@
 # Airbnb
 
-blog post: [Go to the Support Web Site](https://medium.com/@mad.kehl/dissecting-review-scores-what-makes-a-top-scoring-airbnb-960de66186a1)
+[Go to blog post](https://medium.com/@mad.kehl/dissecting-review-scores-what-makes-a-top-scoring-airbnb-960de66186a1)
 
 The following code uses Kaggle's Boston Airbnb dataset to examine what features are most related to high Airbnb review scores and answer the following questions:  
 
